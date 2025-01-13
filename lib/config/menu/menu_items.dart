@@ -22,6 +22,6 @@ List<MenuItems> appMenuItems = [
   MenuItems(
       title: 'Tarjetas',
       subTitle: 'Varios botones flutter',
-      link: '/carts',
+      link: '/cards',
       icon: Icons.credit_card),
 ];
