@@ -77,7 +77,42 @@ class _ButtonsView extends StatelessWidget {
                 backgroundColor: WidgetStatePropertyAll(colors.primary),
               ),
             ),
+            CustomButton(),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class CustomButton extends StatefulWidget {
+  const CustomButton({super.key});
+
+  @override
+  State<CustomButton> createState() => _CustomButtonState();
+}
+
+class _CustomButtonState extends State<CustomButton> {
+  @override
+  Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+    return ClipRect(
+      child: Material(
+        borderRadius: BorderRadius.circular(20),
+        color: colors.primary,
+        child: InkWell(
+          onTap: (){
+            
+          },
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Text(
+              'Hola mundo',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
+          ),
         ),
       ),
     );
