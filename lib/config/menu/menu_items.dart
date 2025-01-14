@@ -49,4 +49,9 @@ List<MenuItems> appMenuItems = [
       subTitle: 'Tutoria introductorio',
       link: '/tutorial',
       icon: Icons.accessibility_rounded),
+  MenuItems(
+      title: 'Infinite scroll y Pull',
+      subTitle: 'Listas infinitas',
+      link: '/infinite',
+      icon: Icons.list_alt_rounded),
 ];
