@@ -8,7 +8,7 @@ class TeamChanger extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final bool isDarkMode = ref.watch(isDarkModeProvider);
+    final bool isDarkMode = ref.watch(themeNotifierProvider).isDarkMode;
 
     return Scaffold(
       appBar: AppBar(
@@ -20,7 +20,8 @@ class TeamChanger extends ConsumerWidget {
                   : Icons.light_mode_outlined),
               onPressed: () {
                 /* ref.read(isDarkModeProvider.notifier).state = !ref.read(isDarkModeProvider.notifier).state; */
-                ref.read(isDarkModeProvider.notifier).update((value) => !value);
+                //ref.read(isDarkModeProvider.notifier).update((value) => !value);
+                ref.read(themeNotifierProvider.notifier).toggleDarMode();
               }),
         ],
       ),
@@ -35,7 +36,8 @@ class _ThemeChengerView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final List<Color> colors = ref.watch(colorsProvider);
-    final int selectColor = ref.watch(selectedColorProvider);
+    //final int selectColor = ref.watch(selectedColorProvider);
+    final int selectColor = ref.watch(themeNotifierProvider).selectColor;
     return ListView.builder(
       itemCount: colors.length,
       itemBuilder: (context, index) {
@@ -53,7 +55,10 @@ class _ThemeChengerView extends ConsumerWidget {
             /* ref
                 .read(selectedColorProvider.notifier)
                 .update((item) => value ?? 0); */
-            ref.read(selectedColorProvider.notifier).state = value ?? 0;
+            //ref.read(selectedColorProvider.notifier).state = value ?? 0;
+            ref
+                .read(themeNotifierProvider.notifier)
+                .changeColorIndex(value ?? 0);
           },
         );
       },

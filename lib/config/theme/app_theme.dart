@@ -16,7 +16,7 @@ class AppTheme {
   final int selectColor;
   final bool isDarkMode;
 
-  AppTheme({required this.selectColor, this.isDarkMode = false})
+  AppTheme({this.selectColor = 0, this.isDarkMode = false})
       : assert(selectColor >= 0, 'selectec color mayor a 0'),
         assert(selectColor < colorList.length, 'mejor a ${colorList.length}');
 
@@ -26,4 +26,13 @@ class AppTheme {
       appBarTheme: AppBarTheme(
         centerTitle: false,
       ));
+
+  AppTheme copyWith({
+    int? selectColor,
+    bool? isDarkMode,
+  }) =>
+      AppTheme(
+        selectColor: selectColor ?? this.selectColor,
+        isDarkMode: isDarkMode ?? this.isDarkMode,
+      );
 }
