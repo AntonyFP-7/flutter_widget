@@ -44,4 +44,9 @@ List<MenuItems> appMenuItems = [
       subTitle: 'Una seria de flutter ',
       link: '/ui-controls',
       icon: Icons.car_rental_outlined),
+  MenuItems(
+      title: 'Introduccion a la aplicacion',
+      subTitle: 'Tutoria introductorio',
+      link: '/tutorial',
+      icon: Icons.accessibility_rounded),
 ];
