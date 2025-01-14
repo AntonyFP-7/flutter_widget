@@ -39,4 +39,9 @@ List<MenuItems> appMenuItems = [
       subTitle: 'StateFulWidget animado',
       link: '/animated',
       icon: Icons.check_box_outlined),
+  MenuItems(
+      title: 'iu controls',
+      subTitle: 'Una seria de flutter ',
+      link: '/ui-controls',
+      icon: Icons.car_rental_outlined),
 ];
