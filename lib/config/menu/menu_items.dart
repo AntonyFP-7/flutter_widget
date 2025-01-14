@@ -24,4 +24,9 @@ List<MenuItems> appMenuItems = [
       subTitle: 'Varios botones flutter',
       link: '/cards',
       icon: Icons.credit_card),
+  MenuItems(
+      title: 'ProgressIndicators',
+      subTitle: 'Generañes y controlados',
+      link: '/progress',
+      icon: Icons.refresh_rounded),
 ];
