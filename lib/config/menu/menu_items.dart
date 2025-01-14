@@ -15,6 +15,11 @@ class MenuItems {
 
 List<MenuItems> appMenuItems = [
   MenuItems(
+      title: 'Riverpod counter',
+      subTitle: 'counter screend',
+      link: '/counter',
+      icon: Icons.add),
+  MenuItems(
       title: 'Botones',
       subTitle: 'Varios botones flutter',
       link: '/buttons',
@@ -54,4 +59,9 @@ List<MenuItems> appMenuItems = [
       subTitle: 'Listas infinitas',
       link: '/infinite',
       icon: Icons.list_alt_rounded),
+  MenuItems(
+      title: 'Theme changer',
+      subTitle: 'Actualizar modo de pantalla',
+      link: '/theme-changer',
+      icon: Icons.color_lens_outlined),
 ];

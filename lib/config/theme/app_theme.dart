@@ -14,15 +14,16 @@ const List<Color> colorList = [
 
 class AppTheme {
   final int selectColor;
+  final bool isDarkMode;
 
-  AppTheme({required this.selectColor})
+  AppTheme({required this.selectColor, this.isDarkMode = false})
       : assert(selectColor >= 0, 'selectec color mayor a 0'),
-        assert(selectColor < colorList.length,'mejor a ${colorList.length}');
+        assert(selectColor < colorList.length, 'mejor a ${colorList.length}');
 
   ThemeData getTheme() => ThemeData(
-        colorSchemeSeed: colorList[selectColor],
-        appBarTheme: AppBarTheme(
-          centerTitle: false,
-        )
-      );
+      brightness: isDarkMode ? Brightness.dark : Brightness.light,
+      colorSchemeSeed: colorList[selectColor],
+      appBarTheme: AppBarTheme(
+        centerTitle: false,
+      ));
 }
